@@ -2,7 +2,6 @@ from multiprocessing.dummy import active_children
 from re import T
 import tensorflow as tf 
 from tensorflow import keras
-import tensorflow_addons as tfa
 import tensorflow.keras.backend as K
 from tensorflow.keras.layers import Input, Lambda, Embedding
 from tensorflow.keras.models import Model
@@ -46,7 +45,7 @@ def scatter(outdir, x, labels, subtitle=None):
     f = plt.figure(figsize=(8, 8))
     ax = plt.subplot(aspect='equal')
     sc = ax.scatter(x[:, 0], x[:, 1], lw=0, s=40,
-                    c=palette[labels.astype(np.int)])
+                    c=palette[labels.astype(int)])
     # plt.xlim(-25, 25)
     # plt.ylim(-25, 25)
     # ax.axis('off')
@@ -205,7 +204,7 @@ loss_weights = [1, 0.5]
 embedding_size = 128
 LEARNING_RATE = 1e-4
 
-best_model = "./classification_model"
+best_model = "./model_triplet_center_loss"
 name = '2025-08-27'
 model_path = os.path.join(best_model, name + 'best_model.weights.h5')
 plot_dir = os.path.join('./plot', name)
