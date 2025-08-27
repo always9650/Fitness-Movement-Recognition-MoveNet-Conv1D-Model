@@ -2,7 +2,7 @@ import cv2
 import os
 
 video_path = "./data/video.mp4"
-output_dir = "./data/All_image"
+output_dir = "./data/All_image/"
 
 # 自動建立輸出目錄
 os.makedirs(output_dir, exist_ok=True)
