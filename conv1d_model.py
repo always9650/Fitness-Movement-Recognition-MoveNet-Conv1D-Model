@@ -132,11 +132,11 @@ if __name__ == "__main__":
     best_model = "./model_triplet_center_loss"
     if not os.path.exists(best_model):
         os.makedirs(best_model)
-    model_path = os.path.join(best_model, str(datetime.now().date()) + 'best_model.h5')
+    model_path = os.path.join(best_model, str(datetime.now().date()) + 'best_model.weights.h5')
     logdir = os.path.join(best_model, "logs", datetime.now().strftime("%Y%m%d-%H%M%S"))
     
     # 加載數據
-    X, Y = load_and_preprocess_data('./data/bones_label (1).json')
+    X, Y = load_and_preprocess_data('./data/bones_label.json')
     
     # 數據分割
     x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, shuffle=True)
