@@ -68,6 +68,12 @@ python vgg16_model.py
 - YOLOv4 模型:
 需先安裝 YOLOv4 環境後執行訓練
 ```
+```
+
+Extra: TSNE
+```python
+python model_pred.py
+```
 
 ## 資料集
 - 訓練樣本：659張
