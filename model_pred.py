@@ -159,6 +159,8 @@ def process_bones_data(bones_str, std_x, std_y, max_x, max_y):
             value = (value - std_y) / max_y
         elif counter % 3 == 1:
             value = (value - std_x) / max_x
+        else:
+            continue
         bones_temp_list.append(value)
     return bones_temp_list
 
